@@ -33,4 +33,4 @@ export default function Navbar(props) {
 }
 
 
-Navbar.protoTypes={title:PropTypes.number}
+Navbar.propTypes={title:PropTypes.string}
