@@ -21,7 +21,8 @@ export default function TextForm(props) {
   const [text, setText] = useState("");
  
   return (
-    <div className="container mt-5">
+    <>
+    <div className="container mt-2">
 <div className="mb-3">
 <h1 className='mb-4 text-center fw-bold'>{props.heading}</h1>
 
@@ -30,5 +31,14 @@ export default function TextForm(props) {
   <button className="btn btn-warning btn-sm  mt-2" onClick={handleLowerClick}>Convert To Lowercase</button>
 </div>
 </div>
+  <div className="container">
+    <h1>Your Text Summary</h1>
+    <p>{text.split(" ").length} Words {text.length} Characters</p>
+    <p>{0.008 * text.split(" ").length} Minutes Read</p>
+    <h2>Preview</h2>
+    <p>{text}</p>
+  </div>
+</>
+
   )
 }
