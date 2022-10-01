@@ -13,6 +13,11 @@ export default function TextForm(props) {
     setText(mytext)
   }
 
+  const copyText = () =>{
+    let mytext = document.getElementById("mybox");
+    mytext.select()
+    document.execCommand('copy')
+  }
 
   const handleChange = (event) =>{
     setText(event.target.value)
@@ -27,8 +32,9 @@ export default function TextForm(props) {
 <h1 className='mb-4 text-center fw-bold'>{props.heading}</h1>
 
   <textarea className="form-control form-control-sm" value={text} onChange={handleChange} id="mybox" rows="10" cols="2"></textarea>
-  <button className="btn btn-primary btn-sm  mt-2" onClick={handleUpClick}>Convert To Uppercase</button>
-  <button className="btn btn-warning btn-sm  mt-2" onClick={handleLowerClick}>Convert To Lowercase</button>
+  <button className="btn btn-primary btn-sm mx-2  mt-2" onClick={handleUpClick}>Convert To Uppercase</button>
+  <button className="btn btn-warning btn-sm mx-2  mt-2" onClick={handleLowerClick}>Convert To Lowercase</button>
+  <button className="btn btn-warning btn-sm mx-2 mt-2" onClick={copyText}>Copy</button>
 </div>
 </div>
   <div className="container">
@@ -37,6 +43,7 @@ export default function TextForm(props) {
     <p>{0.008 * text.split(" ").length} Minutes Read</p>
     <h2>Preview</h2>
     <p>{text}</p>
+   
   </div>
 </>
 
