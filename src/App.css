@@ -3,7 +3,7 @@
 }
 
 .bmicon  {
-    width: 35rem;
+    max-width: 35rem;
     margin-top: 2rem;
     background: rgb(199, 196, 196);
     box-shadow: 10px 10px 5px 5px;
@@ -21,3 +21,75 @@
     margin-bottom: 1rem;
 }
 
+.calc
+{
+    max-width: 25rem;
+    margin:  auto;
+    margin-bottom: 10px;
+    margin-top: 30px;
+   
+
+}
+#answer{
+    background-color: #e2e2e2;
+    padding: 10px;
+    font-size: 35px;
+    max-width: 25rem;
+    height: 45px;
+    text-align: right;
+    border: 3px solid black;
+}
+
+.button{
+    background-color: black;
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    border: 1px solid rgb(65, 63, 63);
+    float: left;
+    color: white;
+}
+
+
+.button1{
+    width: 160px;
+}
+
+.about-section
+{
+    max-width: 50rem;
+    margin: auto;
+    margin-top: 3rem;
+}
+
+.jun
+{
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 421px) {
+    #answer{
+ 
+       
+        max-width: 20rem;
+       
+    }
+}
+
+@media screen and (max-width: 345px) {
+    #answer{
+ 
+       
+        max-width: 15rem;
+       
+    }
+}
+
+@media screen and (max-width: 257px) {
+    #answer{
+ 
+       
+        max-width: 10rem;
+       
+    }
+}

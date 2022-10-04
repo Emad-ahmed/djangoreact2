@@ -24,6 +24,9 @@ export default function Navbar(props) {
                 <Link className="nav-link active" aria-current="page" to="/bmi">Bmi</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/cal">Calculator</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/about">About</Link>
                
               </li>

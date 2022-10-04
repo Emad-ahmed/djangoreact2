@@ -7,6 +7,7 @@ import TextForm from './components/TextForm';
 import Alert from './components/Alert';
 import About from './components/About';
 import Bmi from './components/Bmi'
+import Cal from './components/Cal';
 
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
@@ -69,6 +70,7 @@ function App() {
         <Route exact path="/" element={<TextForm showAlert = {showAlert} heading="Enter Text To Analyze"></TextForm>} />
         <Route exact path="/about" element={<About></About>} />
         <Route exact path="/bmi" element={<Bmi></Bmi>} />
+        <Route exact path="/cal" element={<Cal></Cal>} />
       </Routes>
 
 
