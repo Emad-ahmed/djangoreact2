@@ -1,10 +1,14 @@
 
 import { useState } from 'react';
 import './App.css';
+
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import About from './components/About';
+import About from './components/About';
+import Bmi from './components/Bmi'
+
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setDarkmode] = useState("light")
@@ -24,6 +28,9 @@ function App() {
         type : type
       }
     )
+    setTimeout(() => {
+      setAlert(null);
+    }, 1500);
   }
 
   const togglemode = () =>{
@@ -36,6 +43,7 @@ function App() {
       MysetStle({
         color : 'white',
     })
+    document.title = "Textutils - Dark Mode"
     } else{
       setDarkmode("light");
       document.body.style.backgroundColor = "white";
@@ -47,12 +55,24 @@ function App() {
     
     }
   }
+  
   return (
     <>
-      <Navbar title="Emad Textutils" mode = {mode} togglemode = {togglemode}  myStyle={myStyle}></Navbar>
+
+    <Router>
+      <Navbar title="Emad Textutils" mode = {mode} togglemode = {togglemode}   myStyle={myStyle}></Navbar>
       <Alert alert={alert}></Alert>
-      <TextForm showAlert = {showAlert} heading="Enter Text To Analyze"></TextForm>
-  
+     
+      
+     
+      <Routes>
+        <Route exact path="/" element={<TextForm showAlert = {showAlert} heading="Enter Text To Analyze"></TextForm>} />
+        <Route exact path="/about" element={<About></About>} />
+        <Route exact path="/bmi" element={<Bmi></Bmi>} />
+      </Routes>
+
+
+    </Router>
     </>
    
   );
